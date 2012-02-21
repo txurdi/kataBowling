@@ -36,14 +36,21 @@ class kataBowling {
 	}
 		
 	function resuelve($jugada) {
-		if (substr($jugada,0,1)=='X'){
-			$contador=1;
-		} else {
-			$contador=2;
+		$resultado = 0;
+		$indice = 0;
+		$tipo_anterior = '';
+		while ($indice<strlen($jugada)) {	
+			if (substr($jugada,$indice,1)=='X'){
+				$tam=1;
+			} else {
+				$tam=2;
+			}
+			$ar_frame = $this->puntua_frame(substr($jugada,$indice,$tam),$tipo_anterior);
+			$indice += $tam;
+			$resultado += $ar_frame[0];
+			$tipo_anterior = $ar_frame[1];
 		}
-		$ar_frame1 = $this->puntua_frame(substr($jugada,0,$contador));
-		$ar_frame2 = $this->puntua_frame(substr($jugada,$contador,2),$ar_frame1[1]);
-		return $ar_frame1[0] + $ar_frame2[0];
+		return $resultado;
 	}
 	
 	

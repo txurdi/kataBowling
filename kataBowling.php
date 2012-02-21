@@ -13,7 +13,7 @@ class kataBowling {
 			$resultado = 0;
 		} else if ($frame=='X') {
 			$resultado = 10;
-			if ($tipo_anterior=='pleno'){
+			if (($tipo_anterior=='pleno')||($tipo_anterior=='pleno_pleno')){
 				$tipo='pleno_pleno';
 			} else {
 				$tipo = 'pleno';
@@ -60,6 +60,6 @@ class kataBowling {
 		return $resultado;
 	}
 	
-	
+
 }
 ?>

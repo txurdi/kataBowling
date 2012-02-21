@@ -10,6 +10,7 @@ class kataBowling {
 	
 	function resuelve($jugada) {
 		if ($jugada=='-') return 0;
+		if ($jugada=='X') return 10;
 		return $jugada;
 		
 	}

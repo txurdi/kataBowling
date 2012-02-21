@@ -46,12 +46,12 @@ class kataBowlingTest extends PHPUnit_Framework_TestCase {
 			array('XX6/',60),
 			array('XX43',51),
 			array('XXX',60),
-			array('XXXXXXXXX72',267)/*,
+			array('XXXXXXXXX72',267),
 			array('9-9-9-9-9-9-9-9-9-9-',90),
 			array('5/5/5/5/5/5/5/5/5/51',141),
-			array('XXXXXXXXXX5',285),
+			array('XXXXXXXXXX5',280),
 			array('XXXXXXXXXXXX',300),
-			array('XXXXXXXXX5/6',282),
+			array('XXXXXXXXX5/6',282)/*,
 			array('5/5/5/5/5/5/5/5/5/5/5',150)
         */);
     }

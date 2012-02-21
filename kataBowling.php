@@ -46,20 +46,27 @@ class kataBowling {
 		$resultado = 0;
 		$indice = 0;
 		$tipo_anterior = '';
+		$n_jugada = 1;
 		while ($indice<strlen($jugada)) {	
 			if (substr($jugada,$indice,1)=='X'){
 				$tam=1;
 			} else {
 				$tam=2;
 			}
+			if (($n_jugada==11) && ($tipo_anterior=='pleno_pleno')){
+				$tipo_anterior = 'pleno';
+			}
+			if ($n_jugada==12) {
+				$tipo_anterior = '';
+			}
 			$ar_frame = $this->puntua_frame(substr($jugada,$indice,$tam),$tipo_anterior);
 			$indice += $tam;
 			$resultado += $ar_frame[0];
 			$tipo_anterior = $ar_frame[1];
+			$n_jugada ++;
 		}
 		return $resultado;
 	}
-	
 
 }
 ?>

@@ -17,9 +17,9 @@ class kataBowlingTest extends PHPUnit_Framework_TestCase {
     {
 		return array(
         	array('1',1),
-			array('2',2)/*,
+			array('2',2),
 			array('9',9),
-			array('-',0),
+			array('-',0)/*,
 			array('X',10),
 			array('11',2),
 			array('-1',1),

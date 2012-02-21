@@ -13,25 +13,21 @@ class kataBowling {
 			$resultado = 0;
 		} else if ($frame=='X') {
 			$resultado = 10;
-			if ($tipo_anterior=='semipleno'){
-				$resultado+=10;
-			}
 			$tipo = 'pleno';
 		} else if (strlen($frame)==2) { 
 			if (substr($frame, 1,1)=='/') {
 				$resultado = 10;
-				if ($tipo_anterior=='semipleno'){
-					$resultado+=10;
-				}
 				$tipo = 'semipleno';
 			} else {
 				$resultado = (substr($frame, 0,1)+substr($frame, 1,1));
-				if ($tipo_anterior=='semipleno'){
-					$resultado+=substr($frame, 0,1);
-				}
 			}
 		} else {
 			$resultado = $frame;
+		}
+		if ($tipo_anterior=='semipleno'){
+			if (substr($frame, 0,1)=='X') $resultado += 10;
+			else if (substr($frame, 0,1)=='-') $resultado += 0;
+			else $resultado += (substr($frame, 0,1));
 		}
 		return array($resultado, $tipo);
 	}

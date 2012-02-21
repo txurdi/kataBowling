@@ -23,8 +23,8 @@ Se usará X para los plenos, / para semiplenos, - para nulos o ceros.
 - Creamos una batería de pruebas con las combinaciones que nos pueden parecer conflictivas.
 
 ## Conclusiones:
-- 
-
+- El último test no lo hemos pasado por desconocimiento del algoritmo de la última jugada de bowling (lo dejamos TO-DO)
+- Hemos guardado los diferentes test en comits separados
 
 ## Autores
 - En [@SocSoft](http://twitter.com/SocSoft):

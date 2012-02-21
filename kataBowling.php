@@ -13,7 +13,11 @@ class kataBowling {
 			$resultado = 0;
 		} else if ($frame=='X') {
 			$resultado = 10;
-			$tipo = 'pleno';
+			if ($tipo_anterior=='pleno'){
+				$tipo='pleno_pleno';
+			} else {
+				$tipo = 'pleno';
+			}
 		} else if (strlen($frame)==2) { 
 			if (substr($frame, 1,1)=='/') {
 				$resultado = 10;
@@ -31,6 +35,9 @@ class kataBowling {
 		}
 		if ($tipo_anterior=='pleno'){
 			$resultado += $resultado;
+		}
+		if ($tipo_anterior=='pleno_pleno'){
+			$resultado += 2*$resultado;
 		}
 		return array($resultado, $tipo);
 	}

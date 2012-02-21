@@ -29,12 +29,20 @@ class kataBowling {
 			else if (substr($frame, 0,1)=='-') $resultado += 0;
 			else $resultado += (substr($frame, 0,1));
 		}
+		if ($tipo_anterior=='pleno'){
+			$resultado += $resultado;
+		}
 		return array($resultado, $tipo);
 	}
 		
 	function resuelve($jugada) {
-		$ar_frame1 = $this->puntua_frame(substr($jugada,0,2));
-		$ar_frame2 = $this->puntua_frame(substr($jugada,2,2),$ar_frame1[1]);
+		if (substr($jugada,0,1)=='X'){
+			$contador=1;
+		} else {
+			$contador=2;
+		}
+		$ar_frame1 = $this->puntua_frame(substr($jugada,0,$contador));
+		$ar_frame2 = $this->puntua_frame(substr($jugada,$contador,2),$ar_frame1[1]);
 		return $ar_frame1[0] + $ar_frame2[0];
 	}
 	

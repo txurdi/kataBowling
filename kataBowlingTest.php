@@ -16,8 +16,8 @@ class kataBowlingTest extends PHPUnit_Framework_TestCase {
     public function bateria()
     {
 		return array(
-        	array('1',1)/*,
-			array('2',2),
+        	array('1',1),
+			array('2',2)/*,
 			array('9',9),
 			array('-',0),
 			array('X',10),

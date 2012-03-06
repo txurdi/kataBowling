@@ -34,4 +34,4 @@ Se usará X para los plenos, / para semiplenos, - para nulos o ceros.
 
 ## Katas anteriores
 - [1st Kata en GitHub](https://github.com/txurdi/KataRomanNumeralsPHP)
-- [2nd Kata en GitHub](https://github.com/txurdi/kataBowling)
+- [2nd Kata en GitHub](https://github.com/txurdi/kataMinesweeper)
